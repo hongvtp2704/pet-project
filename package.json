@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "yarn:dev:server yarn:dev:client",
+    "dev:server": "cd ./server && concurrently 'vite' 'nodemon server.ts'",
+    "dev:client": "cd ./client && vite"
+  }
+}
