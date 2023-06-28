@@ -1,12 +1,11 @@
-import express, { Express, Request, Response } from 'express'
-import dotenv from 'dotenv'
+import express, { Express, Request, Response } from 'express';
+import dotenv from 'dotenv';
 
-dotenv.config()
+dotenv.config();
 
-const app: Express = express()
-
-app.get('/', (req: Request, res: Response)=> {
-    res.send('Hello word')
-})
+const app: Express = express();
+app.get('/', (req: Request, res: Response) => {
+  res.send('Hello word');
+});
 
 export const viteNodeApp = app;
