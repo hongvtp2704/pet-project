@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d9e025a-abb6-4280-b5c0-f6ec3c849d30" name="Changes" comment="add env variable to vite.config.ts">
+    <list default="true" id="4d9e025a-abb6-4280-b5c0-f6ec3c849d30" name="Changes" comment="update README.md">
+      <change afterPath="$PROJECT_DIR$/server/src/controller/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/database/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/service/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/utils/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/v1/routes/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/server.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +54,7 @@
       <recent name="$PROJECT_DIR$/server/src" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.format">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/server/package.json" />
       <command value="run" />
@@ -92,9 +97,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.format" />
         <item itemvalue="npm.lint" />
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.dev:server" />
       </list>
     </recent_temporary>
@@ -116,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687942145519</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update README.md">
+      <created>1687944697010</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1687944697010</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +136,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add env variable to vite.config.ts" />
-    <option name="LAST_COMMIT_MESSAGE" value="add env variable to vite.config.ts" />
+    <MESSAGE value="update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="update README.md" />
   </component>
 </project>
