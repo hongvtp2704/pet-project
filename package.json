@@ -6,7 +6,7 @@
   ],
   "scripts": {
     "dev": "concurrently yarn:dev:server yarn:dev:client",
-    "dev:server": "cd ./server && concurrently 'vite' 'nodemon server.ts'",
+    "dev:server": "cd ./server && concurrently 'vite' 'nodemon src/server.ts'",
     "dev:client": "cd ./client && vite"
   }
 }
