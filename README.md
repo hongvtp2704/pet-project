@@ -19,3 +19,7 @@ yarn dev:server
 # Under project root
 yarn dev:client
 ````
+## Database config
+Module used: mysql2
+```shell
+yarn add mysql2
