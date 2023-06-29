@@ -24,10 +24,12 @@ yarn dev:client
 Module used: 'mysql2'
 ````shell
 yarn add mysql2
-
+````
 Database information:
  - Update the data in .env file under ./server
-    + DATABASE_HOST=34.142.224.124
-    + DATABASE_NAME=pet_project
-    + DATABASE_USER=root
-    + DATABASE_PASSWORD=312002
+````shell
+DATABASE_HOST=34.142.224.124
+DATABASE_NAME=pet_project
+DATABASE_USER=root
+DATABASE_PASSWORD=312002
+````
