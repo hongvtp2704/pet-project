@@ -13,12 +13,8 @@ const pool = mysql.createPool({
     keepAliveInitialDelay: 0
 });
 
-const connection = mysql.createConnection({
-    host: process.env.DATABASE_HOST,
-    user: process.env.DATABASE_USER as string,
-    password: process.env.DATABASE_PASSWORD,
-    database: process.env.DATABASE_NAME as string
-});
+const poolPromise = pool.promise();
 
-export {connection, pool};
+
+export { pool, poolPromise };
 
