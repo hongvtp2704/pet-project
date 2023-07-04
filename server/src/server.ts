@@ -1,8 +1,20 @@
-import express, { Express, Request, Response } from 'express';
+import express, { Express } from 'express';
+import path from "path";
+import bodyParser from "body-parser";
+import cors from 'cors';
+import routes from './v1/routes';
 
 const app: Express = express();
-app.get('/', (req: Request, res: Response) => {
-  res.send('Hello word');
-});
+app.use(express.json());
+
+app.use(bodyParser.urlencoded({
+    extended: true
+    }));
+
+app.use(routes);
+
+app.use(cors());
 
 export const viteNodeApp = app;
+
+

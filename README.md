@@ -19,3 +19,17 @@ yarn dev:server
 # Under project root
 yarn dev:client
 ````
+
+### Database Configuration
+Module used: 'mysql2'
+````shell
+yarn add mysql2
+````
+Database information:
+ - Update the data in .env file under ./server
+````shell
+DATABASE_HOST=34.142.224.124
+DATABASE_NAME=pet_project
+DATABASE_USER=root
+DATABASE_PASSWORD=312002
+````
