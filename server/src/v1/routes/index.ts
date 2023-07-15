@@ -1,8 +1,8 @@
-import express, {Express, Router} from "express";
-import testRouter from './test';
+import {Express} from "express";
+import userRouter from './user'
 
-const routes = Router();
-
-routes.use('/user', testRouter);
+const routes = (app:Express):void => {
+    app.use('/user', userRouter)
+}
 
 export default routes;
