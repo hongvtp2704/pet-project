@@ -16,11 +16,12 @@ const pool = mysql.createPool({
 
 const poolPromise = pool.promise();
 
-// For pool initialization, see above
 pool.getConnection(function(err, conn) {
- // Do something with the connection
- console.log(err)
- // Don't forget to release the connection when finished!
+ if(err){
+  console.log(err)
+ }else{
+  console.log("DB connect successfully!!!")
+ }
  pool.releaseConnection(conn);
 });
 
