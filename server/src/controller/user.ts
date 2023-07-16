@@ -5,7 +5,7 @@ class UserController {
   try{
    return UserService.getAllUsers();
   }catch (err){
-   console.log('controller',err)
+   console.log(err)
   }
 
  }
