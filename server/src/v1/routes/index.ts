@@ -1,8 +1,7 @@
-import { Express } from 'express';
+import { Router } from 'express';
 import userRouter from './user';
+const routes = Router();
 
-const routes = (app: Express): void => {
- app.use('/user', userRouter);
-};
+routes.use('/user', userRouter);
 
 export default routes;

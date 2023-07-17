@@ -11,6 +11,19 @@ class UserService {
    console.log('service',err)
   }
  };
+ 
+ findUser = async (username: string) => {
+    try {
+        const [rows, fields] = await poolPromise.query("SELECT * FROM users WHERE username = ?",[username]);
+        console.log(rows);
+        console.log(fields);
+
+        return [rows, fields];
+    } catch(err) {
+        return err;
+    }
+ };
+
 }
 
 export default new UserService()
