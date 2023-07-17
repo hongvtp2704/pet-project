@@ -8,5 +8,9 @@
     "dev": "concurrently yarn:dev:server yarn:dev:client",
     "dev:server": "cd ./server && yarn dev",
     "dev:client": "cd ./client && vite"
+  },
+  "dependencies": {
+    "cookies-parser": "^1.2.0",
+    "jsonwebtoken": "^9.0.1"
   }
 }

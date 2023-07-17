@@ -32,6 +32,29 @@ DATABASE_HOST=34.142.224.124
 DATABASE_NAME=pet_project
 DATABASE_USER=root
 DATABASE_PASSWORD=312002
+````
+
+### Security Information
+Using bcrypt to hash password before saving into database:
+````shell
+yarn add bcrypt
+````
+````shell
+yarn add --dev @types/bcrypt
+````
+
+Using jwt and cookies to provide Auth Middlewares:
+Install jwt package:
+````shell
+yarn add jsonwebtoken
+````
+Install cookie parser
+````shell
+yarn add cookie-parser
+````
+
+Update ./server/env file:
+````shell
 ACCESS_TOKEN_SERECT=bb4cfa552257e0c108473d0716b9fd1b8b828d7bb87584c631873ea0221937f0
 ACCESS_TOKEN_LIVE=120
 REFRESH_TOKEN_SERECT=efb526d5326423f26274f9abc04ae61619e574b57addace4d2d1938d447bc6b5
