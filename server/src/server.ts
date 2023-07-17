@@ -15,7 +15,6 @@ app.use(
 );
 app.use(cors());
 
-routes(app);
 
 export const viteNodeApp = app;
 
