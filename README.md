@@ -35,7 +35,7 @@ DATABASE_PASSWORD=312002
 ````
 
 ### Security Information
-## Using bcrypt to hash password before saving into database:
+#### Using bcrypt to hash password before saving into database:
 ````shell
 yarn add bcrypt
 ````
@@ -43,17 +43,17 @@ yarn add bcrypt
 yarn add --dev @types/bcrypt
 ````
 
-## Using jwt and cookies to provide Auth Middlewares:
-# Install jwt package:
+#### Using jwt and cookies to provide Auth Middlewares:
+##### Install jwt package:
 ````shell
 yarn add jsonwebtoken
 ````
-# Install cookie parser
+##### Install cookie parser
 ````shell
 yarn add cookie-parser
 ````
 
-## Update ./server/env file:
+#### Update ./server/env file:
 ````shell
 ACCESS_TOKEN_SERECT=bb4cfa552257e0c108473d0716b9fd1b8b828d7bb87584c631873ea0221937f0
 ACCESS_TOKEN_LIVE=120
