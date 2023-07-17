@@ -6,5 +6,6 @@ import { authtorization } from '../../middlewares/authen';
 
 router.get('/',authtorization ,UserController.getAllUsers);
 router.post('/login',UserController.login);
+router.post('/signup',UserController.create);
 
 export default router;

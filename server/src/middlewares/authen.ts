@@ -12,9 +12,8 @@ const authtorization = (req: Request, res: Response, next: NextFunction) => {
 
     try {
         //decode the access token received by serect key
-        console.log(process.env.ACCESS_TOKEN_SECRET);
-        const decodeToken = jwt.verify(accessToken,  process.env.ACCESS_TOKEN_SERECT as string);
 
+        const decodeToken = jwt.verify(accessToken,  process.env.ACCESS_TOKEN_SERECT as string);
         //continue the next function if jwt verified
         next();
 

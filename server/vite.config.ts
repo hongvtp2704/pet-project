@@ -59,6 +59,11 @@ export default defineConfig(({ mode }) => {
    //   'class-validator',
    //   'fastify-swagger',
    // ],
+   exclude: [
+        'mock-aws-s3',
+        'aws-sdk',
+        'nock',
+     ],
   },
  };
 });

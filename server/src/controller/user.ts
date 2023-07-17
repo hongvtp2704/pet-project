@@ -27,7 +27,8 @@ class UserController {
             }
 
             //Will be update use bcrypt to hash password comparison
-            if(user[0].password = password) {
+            const match = await bcrypt.compare(password as string, user[0].password as string);
+            if(match) {
                 const token = jwt.sign({username: username}, process.env.ACCESS_TOKEN_SERECT as string, {
                     expiresIn: "120s"
                 });
@@ -37,9 +38,32 @@ class UserController {
             }
             
         } catch(err) {
-            console.log('controller', err);
+            console.log('login controller', err);
         }
     };
+
+    create =  (req: Request, res: Response) => {
+        const username = req.body.username;
+        const password = req.body.password;
+
+
+        bcrypt.genSalt(10, function (err, salt) {
+            console.log("Gensalt Err", err);
+            bcrypt.hash(password, salt, async function(err, hash) {
+                console.log("Hash Err", err);
+                console.log(hash);
+            try {  
+                
+                const re= await UserService.createUser(username, hash);
+                res.json({sucess: re});
+            } catch(err) {
+                res.json({sucess: false});
+                console.log(err);
+            }
+
+            })
+        });
+    }
 
 }
 
