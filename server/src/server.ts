@@ -1,10 +1,8 @@
 import express, { Express } from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import dotenv from 'dotenv';
-
+import * as dotenv from 'dotenv'
 dotenv.config();
-
 import routes from './v1/routes';
 
 const app: Express = express();
@@ -17,6 +15,7 @@ app.use(
 );
 app.use(cors());
 
-app.use(routes);
+routes(app);
 
 export const viteNodeApp = app;
+
