@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 import * as dotenv from 'dotenv'
 dotenv.config();
 
-const authtorization = (req: Request, res: Response, next: NextFunction) => {
+const authorization = (req: Request, res: Response, next: NextFunction) => {
     const accessToken = req.cookies.jwt;
     //if access token is not in cookies, request unauthorized
     if(!accessToken) {
@@ -20,8 +20,10 @@ const authtorization = (req: Request, res: Response, next: NextFunction) => {
     } catch(err) {
         console.log("Authen",err);
         //send unauthorized error code
-        res.status(401).send();
+        if(err) {
+            res.status(401).json(err);
+        }
     }
 }
 
-export {authtorization};
+export {authorization};

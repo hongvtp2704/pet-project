@@ -1,13 +1,12 @@
 import { poolPromise } from '../config/database';
-import user from '../controller/user';
 
 class UserService {
  getAllUsers = async () => {
   try{
    console.log("service")
-   const result = await poolPromise.query("SELECT * FROM users");
-   console.log(result);
-   return result;
+   const [rows, fields] = await poolPromise.query("SELECT * FROM users");
+   console.log(rows);
+   return rows;
   }catch (err){
    console.log('service',err)
   }
